@@ -29,7 +29,7 @@ class EventsController < ApplicationController
 
   def destroy
     @event.destroy!
-    render json @event 
+    render json: @event
   end
 
   private 
