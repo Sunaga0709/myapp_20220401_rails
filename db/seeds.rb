@@ -6,7 +6,3 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Event.create!(name: '予定1', start: '2022-04-01 10:00:00', end: '2022-04-01 11:00:00', color: 'green')
-Event.create!(name: '予定2', start: '2022-04-02 10:00:00', end: '2022-04-02 11:00:00', memo: 'これは予定2です')
-Event.create!(name: '予定3', start: '2022-04-03 10:00:00', end: '2022-04-03 11:00:00', color: 'red')
-Event.create!(name: '予定4', start: '2022-04-04 10:00:00', end: '2022-04-04 11:00:00', color: 'black')
