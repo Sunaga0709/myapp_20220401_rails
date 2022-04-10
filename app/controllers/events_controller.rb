@@ -13,7 +13,7 @@ class EventsController < ApplicationController
     event = Event.new(event_params)
     
     if event.save
-      render json: event 
+      render json: event
     else
       render json: event.errors, status: 422
     end
@@ -35,7 +35,7 @@ class EventsController < ApplicationController
   private 
 
   def event_params  # 受け取る情報を制限
-    params.require(:event).permit(:id, :name, :start, :end, :memo, :color)
+    params.require(:event).permit(:name, :start, :end, :memo, :color)
   end
 
   def find_event  # 特定のイベントを取得

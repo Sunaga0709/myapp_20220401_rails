@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_10_131440) do
+ActiveRecord::Schema.define(version: 2022_04_03_050348) do
 
   create_table "events", charset: "utf8mb4", force: :cascade do |t|
     t.string "name", limit: 100, null: false
@@ -20,16 +20,6 @@ ActiveRecord::Schema.define(version: 2022_04_10_131440) do
     t.string "color"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "user_id", null: false
-    t.index ["user_id"], name: "index_events_on_user_id"
   end
 
-  create_table "users", charset: "utf8mb4", force: :cascade do |t|
-    t.string "name", null: false
-    t.string "password_digest", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  add_foreign_key "events", "users"
 end
