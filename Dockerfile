@@ -5,6 +5,9 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
     && apt-get install -y nodejs yarn \
     && mkdir /app
 
+# ENV RAILS_ENV="production"
+# ENV NODE_ENV="production"
+
 WORKDIR /app
 COPY Gemfile /app/Gemfile
 COPY Gemfile.lock /app/Gemfile.lock
@@ -22,4 +25,4 @@ EXPOSE 3000
 CMD ["rails", "server", "-b", "0.0.0.0"] 
 
 # 本番用
-# CMD["rails", "server", "-b", "IPaddres"]
+# CMD["rails", "server", "-b", "0.0.0.0", "-e", "production"]
