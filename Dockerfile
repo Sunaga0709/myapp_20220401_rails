@@ -6,7 +6,7 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
     && mkdir /app
 
 # ENV RAILS_ENV="production"
-# ENV NODE_ENV="production"
+ENV EDITOR=vi
 
 WORKDIR /app
 COPY Gemfile /app/Gemfile
